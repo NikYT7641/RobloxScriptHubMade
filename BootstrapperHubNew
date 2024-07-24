@@ -1,0 +1,265 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "SH Team [Random roblox scripts] BOOTSTRAPPER", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "Script Hub",
+	Content = "Welcome to the bootstrapper!",
+	Image = "rbxassetid://4483345998",
+	Time = 7
+})
+
+local Tab = Window:MakeTab({
+	Name = "Bootstrapper",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Status: Work"
+})
+
+local Section = Tab:AddSection({
+	Name = "Version: V1.05"
+})
+
+local Section = Tab:AddSection({
+	Name = "Next: V1.1"
+})
+
+Tab:AddButton({
+	Name = "Open Script Hub V1.05",
+	Callback = function()
+      		local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "SH Team [Random roblox scripts] V1.05", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "Script Hub",
+	Content = "V1.05 Changelog: Added Unc test (universal), Guide boss fight (slap battles), Tiger Admin (Prison Life)",
+	Image = "rbxassetid://4483345998",
+	Time = 7
+})
+
+local Tab = Window:MakeTab({
+	Name = "Universal",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Infinite yield",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Synergy Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/SynergyHub/loader.lua", true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "UNC Test",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua'))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Dusty trip",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Connect Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Arsenal",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "AdvanceTech Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/AdvanceFTeam/Our-Scripts/main/AdvanceTech/Arsenal_V1.6.lua"))()
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Blade ball",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "BEDOL Hub",
+	Callback = function()
+      		_G.UI_Size = 200 -- config ui size
+loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto Parry Script",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/UPD-Blade-Ball-op-autoparry-with-visualizer-8652"))()
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Murder Mystery 2",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Vynixu's hub",
+	Callback = function()
+      		loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Nexus",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/s-o-a-b/nexus/main/loadstring"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto farm hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSick/HighlightMM2/main/Lite"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Lumber Tycoon 2",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "PATCHED"
+})
+
+local Tab = Window:MakeTab({
+	Name = "Blox fruits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "PATCHED"
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Slap battles",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Unknown hub: slap royale version",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Voxul/VoxulHub/main/loader.lua' ))() 
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Unknown Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Get admin glove",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/Ab-admin-glove-badge/main/Ab%20glovr%20badge%20admin"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Unknown Hub: The Guide bossfight",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/Ty7G6BXs/raw"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Build A Boat For Treasure",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Astra Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/0YezNNRh",true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Pet Simulator 99",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "REDz Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Bedwars",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Snyware Hub",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/AFGCLIENT/Snyware/main/Loader'))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "GEF",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Seder hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Mongusohio/GefMadeBysederYTTv/main/GEFNOSKID", true))()
+
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Prison Life",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Tiger Admin",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/H17S32/Tiger_Admin/main/Tiger%20Admin%203.0'))()
+
+  	end    
+})
+  	end    
+})
