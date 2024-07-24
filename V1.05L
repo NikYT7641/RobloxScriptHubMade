@@ -1,0 +1,341 @@
+-- Made BY Mr.Alegator
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 200, 0, 100)
+frame.Position = UDim2.new(0.5, -100, 0.5, -50)
+frame.BackgroundColor3 = Color3.new(1, 1, 1)
+frame.Parent = screenGui
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 20)
+title.Position = UDim2.new(0, 0, 0, -20)
+title.Text = "ScriptHub V1.05 KeySystem"
+title.TextColor3 = Color3.new(1, 1, 1)
+title.BackgroundColor3 = Color3.new(0, 0, 0)
+title.Parent = frame
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+    local delta = input.Position - dragStart
+    frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+title.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = frame.Position
+
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+title.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+
+title.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = false
+        dragInput = nil
+    end
+end)
+
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        update(input)
+    end
+end)
+
+local KeySystem = Instance.new("TextBox")
+KeySystem.Size = UDim2.new(1, 0, 0.5, 0)
+KeySystem.Position = UDim2.new(0, 0, 0, 0)
+KeySystem.Text = "Enter the Key"
+KeySystem.TextColor3 = Color3.new(0, 0, 0)
+KeySystem.BackgroundTransparency = 0.5
+KeySystem.BackgroundColor3 = Color3.new(1, 1, 1)
+KeySystem.TextWrapped = true
+KeySystem.Parent = frame
+
+local SubmitButton = Instance.new("TextButton")
+SubmitButton.Size = UDim2.new(0.5, 0, 0.5, 0)
+SubmitButton.Position = UDim2.new(0, 0, 0.5, 0)
+SubmitButton.Text = "Submit"
+SubmitButton.Parent = frame
+
+local CloseButton = Instance.new("TextButton")
+CloseButton.Size = UDim2.new(0, 20, 0, 20)
+CloseButton.Position = UDim2.new(1, -20, 0, 0)
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.new(1, 1, 1)
+CloseButton.BackgroundColor3 = Color3.new(1, 0, 0)
+CloseButton.Parent = frame
+
+CloseButton.MouseButton1Click:Connect(function()
+    screenGui:Destroy()
+end)
+
+local GetKeyButton = Instance.new("TextButton")
+GetKeyButton.Size = UDim2.new(0.5, 0, 0.5, 0)
+GetKeyButton.Position = UDim2.new(0.5, 0, 0.5, 0)
+GetKeyButton.Text = "Get Key"
+GetKeyButton.Parent = frame
+--------------------------------------------------------------------------
+SubmitButton.MouseButton1Click:Connect(function()
+    local KeySystem = KeySystem.Text
+    if KeySystem == "Scripthub-7tgq-2118-QWDJ" then   
+screenGui:Destroy()
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "SH Team [Random roblox scripts] V1.05", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "Script Hub",
+	Content = "V1.05 Changelog: Added Unc test (universal), Guide boss fight (slap battles), Tiger Admin (Prison Life)",
+	Image = "rbxassetid://4483345998",
+	Time = 7
+})
+
+local Tab = Window:MakeTab({
+	Name = "Universal",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Infinite yield",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Synergy Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/SynergyHub/loader.lua", true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "UNC Test",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua'))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Dusty trip",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Connect Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Arsenal",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "AdvanceTech Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/AdvanceFTeam/Our-Scripts/main/AdvanceTech/Arsenal_V1.6.lua"))()
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Blade ball",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "BEDOL Hub",
+	Callback = function()
+      		_G.UI_Size = 200 -- config ui size
+loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto Parry Script",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/UPD-Blade-Ball-op-autoparry-with-visualizer-8652"))()
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Murder Mystery 2",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Vynixu's hub",
+	Callback = function()
+      		loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Nexus",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/s-o-a-b/nexus/main/loadstring"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto farm hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSick/HighlightMM2/main/Lite"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Lumber Tycoon 2",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "PATCHED"
+})
+
+local Tab = Window:MakeTab({
+	Name = "Blox fruits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "PATCHED"
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Slap battles",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Unknown hub: slap royale version",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Voxul/VoxulHub/main/loader.lua' ))() 
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Unknown Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Get admin glove",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/Ab-admin-glove-badge/main/Ab%20glovr%20badge%20admin"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Unknown Hub: The Guide bossfight",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/Ty7G6BXs/raw"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Build A Boat For Treasure",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Astra Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/0YezNNRh",true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Pet Simulator 99",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "REDz Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Bedwars",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Snyware Hub",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/AFGCLIENT/Snyware/main/Loader'))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "GEF",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Seder hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Mongusohio/GefMadeBysederYTTv/main/GEFNOSKID", true))()
+
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Prison Life",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Tiger Admin",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/H17S32/Tiger_Admin/main/Tiger%20Admin%203.0'))()
+
+  	end    
+})
+  
+  end
+end)
+
+GetKeyButton.MouseButton1Click:Connect(function()
+ setclipboard("https://discord.gg/FzEqHWtBjW") 
+end) 
